@@ -1,0 +1,77 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #9bc19c;
+}
+
+h1 {
+    margin: 0px;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    border-bottom: 4px solid #15120b;
+    box-sizing: border-box;
+}
+
+#displayArea {
+    width: calc(100% - 300px);
+    height: calc(100vh -120px);
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#newJobAppDiv {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#newJobForm input {
+    width: 300px;
+    font-size: 1.2em;
+    padding: 4px 6px 4px 6px;
+    margin-bottom: 20px;
+}
+
+#newJobForm textarea {
+    width: 300px;
+    font-size: 1.1em;
+    padding: 4px 6px 4px 6px;
+    margin-bottom: 20px;
+}
+
+#showJobDiv {
+    width: 100%;
+    display: none;
+}
+
+#jobsList {
+    width: 300px;
+    height: calc(100vh - 120px);
+    float: left;
+    padding: 0px 8px 0px 8px;
+    border-left: 2px solid #15120b;
+    box-sizing: border-box;
+}
+
+#jobsList h3 {
+    text-align: center;
+}
+
+#jobsList li {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+#jobsList li:hover {
+    background-color: #7DA37E;
+}

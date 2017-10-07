@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Programming Job Search App | Job Search 2017</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Aaron Michael McNulty">
+    <meta name="description" content="A tracking system for jobs that have been applied for.">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Job Search App</h1>
+    </header>
+    <div id="displayArea">
+        <div id="newJobAppDiv">
+            <h2>Enter New Job Applied For</h2>
+            <form id="newJobForm">
+                <label for="date">Date</label>
+                <br>
+                <input type="text" name="date" id="dateInput">
+                <br>
+                <label for="company">Company</label>
+                <br>
+                <input type="text" name="company" id="companyInput">
+                <br>
+                <label for="aboutCompany">Info About Company</label>
+                <br>
+                <textarea name="aboutCompany" id="aboutCompanyText" cols="30" rows="10"></textarea>
+                <br>
+                <label for="position">Position</label>
+                <br>
+                <input type="text" name="position" id="positionInput">
+                <br>
+                <label for="contact">Hiring Manager or Contact</label>
+                <br>
+                <input type="text" name="contact" id="contactInput">
+                <br>
+                <label for="site">Website Used To Apply</label>
+                <br>
+                <input type="text" name="site" id="siteInput">
+                <br>
+                <input type="submit" value="SUBMIT" id="newAppSubmitButton">
+            </form>
+        </div>
+        <div id="showJobDiv">
+            <button id="editInfoButton">Edit</button>
+            <p><b>Date Applied:</b> <span id="dateDisplay"></span></p>
+            <p><b>Name of Company:</b> <span id="companyDisplay"></span></p>
+            <p><b>About the Company:</b></p>
+            <p id="aboutDisplay"></p>
+            <p><b>Position Applied For:</b> <span id="positionDisplay"></span></p>
+            <p><b>Hiring Manager or Contact:</b> <span id="contactDisplay"></span></p>
+            <p><b>Website Applied Through:</b> <span id="siteDisplay"></span></p>
+            <form>
+                <label for="notes">Add A Note</label>
+                <br>
+                <input type="text" name="notes" id="notesInput">
+                <br>
+                <input type="submit" value="ADD NOTE" id="addNoteButton">
+            </form>
+        </div>
+    </div>
+    <div id="jobsList">
+        <h3>Jobs Applied For</h3>
+        <ul id="list"></ul>
+    </div>
+    <script src="script/index.js" type="text/javascript"></script>
+</body>
+</html>
