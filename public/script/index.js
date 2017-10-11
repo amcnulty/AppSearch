@@ -75,6 +75,14 @@ function load() {
     
     newAppSubmitButton.addEventListener("click", function(e) {
         e.preventDefault();
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'data/saveJob', true);
+        xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                alert('You have successfully saved a new job!');
+            }
+        }
         var newJob = new Object();
         newJob.jobID = createID();
         newJob.date = dateInput.value.trim();
@@ -83,8 +91,11 @@ function load() {
         newJob.position = positionInput.value.trim();
         newJob.contact = contactInput.value.trim();
         newJob.site = siteInput.value.trim();
-        data.jobsList.push(newJob);
-        saveData();
+        var jsonString = JSON.stringify(newJob);
+        xhr.send(jsonString);
+
+        // data.jobsList.push(newJob);
+        // saveData();
         // localStorage.clear();
     }, false);
 

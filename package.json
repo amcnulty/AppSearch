@@ -4,8 +4,8 @@
   "description": "A useful tool for organizing job applications",
   "main": "index.js",
   "scripts": {
-    "start": "index.js",
-    "test": "test.js"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/amcnulty/AppSearch#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
     "express": "^4.16.1",
     "mongoose": "^4.12.0",
